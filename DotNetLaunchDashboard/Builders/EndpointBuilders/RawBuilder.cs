@@ -2,7 +2,7 @@
 
 namespace DotNetLaunchDashboard.Builders.EndpointBuilders
 {
-    public class RawBuilder : TelemetryParametersBuilderBase<AnalysedResponse>
+    public class RawBuilder : TelemetryParametersBuilderBase<RawResponse>
     {
         protected override string Endpoint { get; set; } = "raw";
 

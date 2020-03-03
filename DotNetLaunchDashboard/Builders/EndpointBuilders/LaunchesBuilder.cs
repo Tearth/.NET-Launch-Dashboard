@@ -2,7 +2,7 @@
 
 namespace DotNetLaunchDashboard.Builders.EndpointBuilders
 {
-    public class LaunchesBuilder : TelemetryParametersBuilderBase<AnalysedResponse>
+    public class LaunchesBuilder : TelemetryParametersBuilderBase<LaunchesResponse>
     {
         protected override string Endpoint { get; set; } = "launches";
 

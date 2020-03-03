@@ -8,5 +8,20 @@ namespace DotNetLaunchDashboard
         {
             return new AnalysedBuilder(company);
         }
+
+        public EventsBuilder Events(string company)
+        {
+            return new EventsBuilder(company);
+        }
+
+        public LaunchesBuilder Launches(string company)
+        {
+            return new LaunchesBuilder(company);
+        }
+
+        public RawBuilder Raw(string company)
+        {
+            return new RawBuilder(company);
+        }
     }
 }

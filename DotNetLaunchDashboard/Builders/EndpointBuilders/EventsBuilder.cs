@@ -2,7 +2,7 @@
 
 namespace DotNetLaunchDashboard.Builders.EndpointBuilders
 {
-    public class EventsBuilder : TelemetryParametersBuilderBase<AnalysedResponse>
+    public class EventsBuilder : TelemetryParametersBuilderBase<EventsResponse>
     {
         protected override string Endpoint { get; set; } = "events";
 
