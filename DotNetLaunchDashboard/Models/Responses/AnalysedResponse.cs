@@ -2,7 +2,7 @@
 
 namespace DotNetLaunchDashboard.Models.Responses
 {
-    public class AnalysedResponse : List<TelemetryCollection<AnalysedTelemetryChunkModel>>
+    public class AnalysedResponse : List<TelemetryCollectionModel<AnalysedTelemetryChunkModel>>
     {
         
     }

@@ -2,7 +2,7 @@
 
 namespace DotNetLaunchDashboard.Models
 {
-    public class TelemetryCollection<T>
+    public class TelemetryCollectionModel<T>
     {
         public int Stage { get; set; }
         public IEnumerable<T> Telemetry { get; set; }
