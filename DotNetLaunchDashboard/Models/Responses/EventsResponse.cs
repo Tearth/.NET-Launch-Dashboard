@@ -2,8 +2,8 @@
 
 namespace DotNetLaunchDashboard.Models.Responses
 {
-    public class EventsResponse : MissionHeaderModel
+    public class EventsResponse : List<EventModel>
     {
-        public IEnumerable<EventModel> Events { get; set; }
+
     }
 }

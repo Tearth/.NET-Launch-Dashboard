@@ -1,7 +1,9 @@
-﻿namespace DotNetLaunchDashboard.Models.Responses
+﻿using System.Collections.Generic;
+
+namespace DotNetLaunchDashboard.Models.Responses
 {
-    public class RawResponse
+    public class RawResponse : List<TelemetryCollection<TelemetryChunkModel>>
     {
-        public TelemetryCollection<TelemetryChunkModel> Raw { get; set; }
+
     }
 }

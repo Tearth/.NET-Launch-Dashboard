@@ -1,7 +1,9 @@
-﻿namespace DotNetLaunchDashboard.Models.Responses
+﻿using System.Collections.Generic;
+
+namespace DotNetLaunchDashboard.Models.Responses
 {
-    public class AnalysedResponse : MissionHeaderModel
+    public class AnalysedResponse : List<TelemetryCollection<AnalysedTelemetryChunkModel>>
     {
-        public TelemetryCollection<AnalysedTelemetryChunkModel> Analysed;
+        
     }
 }
