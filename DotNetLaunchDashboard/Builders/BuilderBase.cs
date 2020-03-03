@@ -11,18 +11,18 @@ namespace DotNetLaunchDashboard.Builders
     public abstract class BuilderBase<T>
     {
         protected abstract string Endpoint { get; set; }
-        protected Dictionary<string, string> Parameters { get; set; }
 
         private readonly HttpClient _httpClient;
         private readonly string _company;
+        private readonly Dictionary<string, string> _parameters;
 
         protected BuilderBase(string company)
         {
-            Parameters = new Dictionary<string, string>();
-
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri(Configuration.BaseApiAddress);
+
             _company = company;
+            _parameters = new Dictionary<string, string>();
         }
 
         public T Execute()
@@ -35,9 +35,19 @@ namespace DotNetLaunchDashboard.Builders
             return await ExecuteBuilderAsync().ConfigureAwait(false);
         }
 
+        protected void AddParameter(string key, string value)
+        {
+            _parameters.Add(key, value);
+        }
+
+        protected void AddParameter(string key, int value)
+        {
+            _parameters.Add(key, value.ToString());
+        }
+
         private async Task<T> ExecuteBuilderAsync()
         {
-            var serializedParameters = string.Join("&", Parameters.Select(p => $"{p.Key}={p.Value}"));
+            var serializedParameters = string.Join("&", _parameters.Select(p => $"{p.Key}={p.Value}"));
             var pathWithParameters = $"{Endpoint}?{serializedParameters}";
             var fullPath = Path.Combine(_company, pathWithParameters);
 
