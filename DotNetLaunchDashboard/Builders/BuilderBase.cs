@@ -48,10 +48,10 @@ namespace DotNetLaunchDashboard.Builders
         private async Task<T> ExecuteBuilderAsync()
         {
             var serializedParameters = string.Join("&", _parameters.Select(p => $"{p.Key}={p.Value}"));
-            var pathWithParameters = $"{Endpoint}?{serializedParameters}";
-            var fullPath = Path.Combine(_company, pathWithParameters);
+            var path = $"{Endpoint}/{_company}";
+            var pathWithParameters = $"{path}?{serializedParameters}";
 
-            var response = await _httpClient.GetStringAsync(fullPath);
+            var response = await _httpClient.GetStringAsync(pathWithParameters);
             var deserializedResponse = JsonConvert.DeserializeObject<T>(response);
 
             return deserializedResponse;
