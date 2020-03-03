@@ -4,4 +4,13 @@
     <TargetFramework>netstandard1.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Builders\Events\" />
+    <Folder Include="Builders\Info\" />
+    <Folder Include="Builders\Launches\" />
+    <Folder Include="Builders\Live\" />
+    <Folder Include="Builders\Raw\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>
