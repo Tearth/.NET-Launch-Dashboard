@@ -2,6 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Tearth</Authors>
+    <Company>Tearth</Company>
+    <PackageId>DotNetLaunchDashboard</PackageId>
+    <Product>.NET Launch Dashboard</Product>
+    <Copyright>Tearth 2020</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Tearth/.NET-Launch-Dashboard/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Tearth/.NET-Launch-Dashboard</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Tearth/.NET-Launch-Dashboard</RepositoryUrl>
+    <PackageTags>api wrapper dotnet csharp launch dashboard</PackageTags>
+    <Description>.NET wrapper for Launch Dashboard API.</Description>
+    <PackageIconUrl>https://raw.githubusercontent.com/Tearth/.NET-Launch-Dashboard/develop/icon.png</PackageIconUrl>
+    <PackageReleaseNotes>* Initial release</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>.\bin\Release\DotNetLaunchDashboard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>.\bin\Debug\DotNetLaunchDashboard.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
