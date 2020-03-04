@@ -4,6 +4,11 @@ namespace DotNetLaunchDashboard
 {
     public class LaunchDashboardCore
     {
+        public InfoBuilder Info()
+        {
+            return new InfoBuilder();
+        }
+
         public AnalysedBuilder Analysed(string company)
         {
             return new AnalysedBuilder(company);
