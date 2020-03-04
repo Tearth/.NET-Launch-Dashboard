@@ -2,6 +2,9 @@
 
 namespace DotNetLaunchDashboard.Models.Responses
 {
+    /// <summary>
+    /// Represents data returned from the "info" endpoint.
+    /// </summary>
     public class InfoResponse
     {
         [JsonProperty("project_name")]
