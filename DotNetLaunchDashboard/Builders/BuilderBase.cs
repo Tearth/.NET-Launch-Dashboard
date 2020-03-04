@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using DotNetLaunchDashboard.Exceptions;
+using DotNetLaunchDashboard.Models.Responses;
 using Newtonsoft.Json;
 
 namespace DotNetLaunchDashboard.Builders
@@ -49,10 +51,16 @@ namespace DotNetLaunchDashboard.Builders
             var serializedParameters = string.Join("&", _parameters.Select(p => $"{p.Key}={p.Value}"));
             var path = $"{Endpoint}/{_company}?{serializedParameters}".TrimStart('/');
 
-            var response = await _httpClient.GetStringAsync(path);
-            var deserializedResponse = JsonConvert.DeserializeObject<T>(response);
+            var response = await _httpClient.GetAsync(path).ConfigureAwait(false);
+            var responseContent = await response.Content.ReadAsStringAsync();
 
-            return deserializedResponse;
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorResponse = JsonConvert.DeserializeObject<ErrorResponse>(responseContent);
+                throw new ApiErrorException($"The API returned a {(int)response.StatusCode} response with this message: {errorResponse.Error}");
+            }
+
+            return JsonConvert.DeserializeObject<T>(responseContent);
         }
     }
 }
