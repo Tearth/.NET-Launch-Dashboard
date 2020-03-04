@@ -1,25 +1,27 @@
-﻿namespace DotNetLaunchDashboard.Builders
+﻿using System.Net.Http;
+
+namespace DotNetLaunchDashboard.Builders
 {
     public abstract class MissionParametersBuilderBase<T> : BuilderBase<T>
     {
-        protected MissionParametersBuilderBase(string company) : base(company)
+        protected MissionParametersBuilderBase(HttpClient httpClient, string company) : base(httpClient, company)
         {
 
         }
 
-        public MissionParametersBuilderBase<T> WithMissionId(int missionId)
+        public BuilderBase<T> WithMissionId(int missionId)
         {
             AddParameter("mission_id", missionId);
             return this;
         }
 
-        public MissionParametersBuilderBase<T> WithFlightNumber(int flightNumber)
+        public BuilderBase<T> WithFlightNumber(int flightNumber)
         {
             AddParameter("flight_number", flightNumber);
             return this;
         }
 
-        public MissionParametersBuilderBase<T> WithLaunchLibraryId(int launchLibraryId)
+        public BuilderBase<T> WithLaunchLibraryId(int launchLibraryId)
         {
             AddParameter("launch_library_id", launchLibraryId);
             return this;

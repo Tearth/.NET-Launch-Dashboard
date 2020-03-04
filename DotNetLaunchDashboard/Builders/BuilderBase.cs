@@ -16,12 +16,11 @@ namespace DotNetLaunchDashboard.Builders
         private readonly string _company;
         private readonly Dictionary<string, string> _parameters;
 
-        protected BuilderBase(string company)
+        protected BuilderBase(HttpClient httpClient, string company)
         {
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri(Configuration.BaseApiAddress);
-
+            _httpClient = httpClient;
             _company = company;
+
             _parameters = new Dictionary<string, string>();
         }
 

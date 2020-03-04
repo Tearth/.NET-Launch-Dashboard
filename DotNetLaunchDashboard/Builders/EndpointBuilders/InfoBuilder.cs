@@ -1,4 +1,5 @@
-﻿using DotNetLaunchDashboard.Models.Responses;
+﻿using System.Net.Http;
+using DotNetLaunchDashboard.Models.Responses;
 
 namespace DotNetLaunchDashboard.Builders.EndpointBuilders
 {
@@ -6,7 +7,7 @@ namespace DotNetLaunchDashboard.Builders.EndpointBuilders
     {
         protected override string Endpoint { get; set; } = "";
 
-        public InfoBuilder() : base(string.Empty)
+        public InfoBuilder(HttpClient httpClient) : base(httpClient, string.Empty)
         {
 
         }

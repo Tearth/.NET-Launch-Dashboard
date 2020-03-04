@@ -1,8 +1,10 @@
-﻿namespace DotNetLaunchDashboard.Builders
+﻿using System.Net.Http;
+
+namespace DotNetLaunchDashboard.Builders
 {
     public abstract class TelemetryParametersBuilderBase<T> : MissionParametersBuilderBase<T>
     {
-        protected TelemetryParametersBuilderBase(string company) : base(company)
+        protected TelemetryParametersBuilderBase(HttpClient httpClient, string company) : base(httpClient, company)
         {
 
         }

@@ -1,12 +1,13 @@
-﻿using DotNetLaunchDashboard.Models.Responses;
+﻿using System.Net.Http;
+using DotNetLaunchDashboard.Models.Responses;
 
 namespace DotNetLaunchDashboard.Builders.EndpointBuilders
 {
-    public class EventsBuilder : TelemetryParametersBuilderBase<EventsResponse>
+    public class EventsBuilder : MissionParametersBuilderBase<EventsResponse>
     {
         protected override string Endpoint { get; set; } = "events";
 
-        public EventsBuilder(string company) : base(company)
+        public EventsBuilder(HttpClient httpClient, string company) : base(httpClient, company)
         {
 
         }
