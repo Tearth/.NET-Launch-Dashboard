@@ -1,5 +1,8 @@
 ﻿namespace DotNetLaunchDashboard.Models
 {
+    /// <summary>
+    /// Represents single measurement.
+    /// </summary>
     public class TelemetryChunkModel
     {
         /// <summary>

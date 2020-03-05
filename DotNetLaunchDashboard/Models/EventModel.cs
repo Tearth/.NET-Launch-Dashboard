@@ -1,5 +1,8 @@
 ﻿namespace DotNetLaunchDashboard.Models
 {
+    /// <summary>
+    /// Represents single event.
+    /// </summary>
     public class EventModel
     {
         /// <summary>

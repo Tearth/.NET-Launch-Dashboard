@@ -2,6 +2,9 @@
 
 namespace DotNetLaunchDashboard.Models
 {
+    /// <summary>
+    /// Contains information about mission (like ID or name).
+    /// </summary>
     public abstract class MissionHeaderModel
     {
         /// <summary>

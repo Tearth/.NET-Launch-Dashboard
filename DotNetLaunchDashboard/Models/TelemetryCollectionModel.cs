@@ -2,6 +2,10 @@
 
 namespace DotNetLaunchDashboard.Models
 {
+    /// <summary>
+    /// Represents wrapper for the telemetry measurements and stage number.
+    /// </summary>
+    /// <typeparam name="T">Type of the measurement.</typeparam>
     public class TelemetryCollectionModel<T>
     {
         /// <summary>

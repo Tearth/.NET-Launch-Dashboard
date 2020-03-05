@@ -2,6 +2,9 @@
 
 namespace DotNetLaunchDashboard.Models
 {
+    /// <summary>
+    /// Represents analysed telemetry chunk.
+    /// </summary>
     public class AnalysedTelemetryChunkModel
     {
         /// <summary>
