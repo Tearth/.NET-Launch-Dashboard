@@ -17,7 +17,7 @@ namespace DotNetLaunchDashboard
         public LaunchDashboardCore()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri(Configuration.BaseApiAddress);
+            _httpClient.BaseAddress = new Uri(Configuration.BaseApiAddressWithVersion);
         }
 
         /// <summary>
