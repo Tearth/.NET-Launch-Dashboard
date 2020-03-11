@@ -90,7 +90,7 @@ namespace DotNetLaunchDashboard.Builders
                 if (!response.IsSuccessStatusCode)
                 {
                     var errorResponse = JsonConvert.DeserializeObject<ErrorResponse>(responseContent);
-                    throw new ApiErrorException($"The API returned a {(int)response.StatusCode} response with this message: {errorResponse.Error}");
+                    throw new ApiErrorException($"The API returned a {(int)response.StatusCode} response: {errorResponse.Error}");
                 }
 
                 return JsonConvert.DeserializeObject<T>(responseContent);
