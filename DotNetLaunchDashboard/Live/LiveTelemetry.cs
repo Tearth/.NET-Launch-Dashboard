@@ -55,18 +55,18 @@ namespace DotNetLaunchDashboard.Live
 
         /// <summary>
         /// Connects to the server and initializes communication. After complete call, you should start receiving telemetry from
-        /// the server. If you want to stop it, use <see cref="Stop"/> method.
+        /// the server. If you want to stop it, use <see cref="StopAsync"/> method.
         /// </summary>
-        public async Task Start()
+        public async Task StartAsync()
         {
             await _socket.ConnectAsync();
             await _socket.EmitAsync("join", (object) new[] {"raw", "analysed"});
         }
 
         /// <summary>
-        /// Disconnects from the server. You won't receive any telemetry after call. If you want to resume, use <see cref="Start"/> method.
+        /// Disconnects from the server. You won't receive any telemetry after call. If you want to resume, use <see cref="StartAsync"/> method.
         /// </summary>
-        public async Task Stop()
+        public async Task StopAsync()
         {
             await _socket.CloseAsync();
         }

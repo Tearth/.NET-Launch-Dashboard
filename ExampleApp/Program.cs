@@ -26,7 +26,7 @@ namespace ExampleApp
                                   $"dDist: {args.DownrangeDistance}, " +
                                   $"angle: {args.Angle}, " +
                                   $"q: {args.Q}");
-            await liveTelemetry.Start();
+            await liveTelemetry.StartAsync();
             
             var launchDashboardCore = new LaunchDashboardCore();
             var result1 = await launchDashboardCore.Info().ExecuteAsync();
