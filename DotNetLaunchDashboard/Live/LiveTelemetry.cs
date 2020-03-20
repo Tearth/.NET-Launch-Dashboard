@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using DotNetLaunchDashboard.Models;
 using Newtonsoft.Json;
 using SocketIOClient;
@@ -56,7 +57,7 @@ namespace DotNetLaunchDashboard.Live
         /// Connects to the server and initializes communication. After complete call, you should start receiving telemetry from
         /// the server. If you want to stop it, use <see cref="Stop"/> method.
         /// </summary>
-        public async void Start()
+        public async Task Start()
         {
             await _socket.ConnectAsync();
             await _socket.EmitAsync("join", (object) new[] {"raw", "analysed"});
@@ -65,7 +66,7 @@ namespace DotNetLaunchDashboard.Live
         /// <summary>
         /// Disconnects from the server. You won't receive any telemetry after call. If you want to resume, use <see cref="Start"/> method.
         /// </summary>
-        public async void Stop()
+        public async Task Stop()
         {
             await _socket.CloseAsync();
         }
