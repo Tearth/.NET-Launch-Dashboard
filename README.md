@@ -9,7 +9,9 @@
 
 WIP
 
-Wrapper for [.NET Launch Dashboard](https://github.com/shahar603/Launch-Dashboard-API) project, providing information about the telemetry of launching rockets.
+Wrapper for [.NET Launch Dashboard](https://github.com/shahar603/Launch-Dashboard-API) project, providing information about the telemetry of launching rockets. To learn more, you can use [Doxygen](https://tearth.github.io/.NET-Launch-Dashboard/) or directly documentation of the API (method names are very familiar with endpoints):
+
+https://github.com/shahar603/Launch-Dashboard-API/wiki
 
 # Minimal requirements
 Library is build on [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) which contains support for:
