@@ -23,7 +23,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="start">Start time of the returned telemetry.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithStart(int start)
+        public TelemetryParametersBuilderBase<T> WithStart(int start)
         {
             AddParameter("start", start);
             return this;
@@ -34,7 +34,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="start">Event name (eg. "meco").</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithStart(string start)
+        public TelemetryParametersBuilderBase<T> WithStart(string start)
         {
             AddParameter("start", start);
             return this;
@@ -45,7 +45,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="end">End time of the returned telemetry.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithEnd(int end)
+        public TelemetryParametersBuilderBase<T> WithEnd(int end)
         {
             AddParameter("end", end);
             return this;
@@ -56,7 +56,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="end">Event name (eg. "meco").</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithEnd(string end)
+        public TelemetryParametersBuilderBase<T> WithEnd(string end)
         {
             AddParameter("end", end);
             return this;
@@ -67,7 +67,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="startOffset">Time offset to apply.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithStartOffset(int startOffset)
+        public TelemetryParametersBuilderBase<T> WithStartOffset(int startOffset)
         {
             AddParameter("start_offset", startOffset);
             return this;
@@ -78,7 +78,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="endOffset">Time offset to apply.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithEndOffset(int endOffset)
+        public TelemetryParametersBuilderBase<T> WithEndOffset(int endOffset)
         {
             AddParameter("end_offset", endOffset);
             return this;
@@ -89,7 +89,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="event">Event name (eg. "meco").</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithEvent(string @event)
+        public TelemetryParametersBuilderBase<T> WithEvent(string @event)
         {
             AddParameter("event", @event);
             return this;
@@ -100,7 +100,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="eventOffset">Time offset to apply.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithEventOffset(int eventOffset)
+        public TelemetryParametersBuilderBase<T> WithEventOffset(int eventOffset)
         {
             AddParameter("event_offset", eventOffset);
             return this;
@@ -111,7 +111,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="frameRate">Frame rate to apply.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithFrameRate(int frameRate)
+        public TelemetryParametersBuilderBase<T> WithFrameRate(int frameRate)
         {
             AddParameter("frame_rate", frameRate);
             return this;
@@ -122,7 +122,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="interval">Interval value to apply.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithInterval(int interval)
+        public TelemetryParametersBuilderBase<T> WithInterval(int interval)
         {
             AddParameter("interval", interval);
             return this;
@@ -133,7 +133,7 @@ namespace DotNetLaunchDashboard.Builders
         /// </summary>
         /// <param name="stage">Stage number.</param>
         /// <returns>Builder instance ready to execute or add new parameters.</returns>
-        public MissionParametersBuilderBase<T> WithStage(int stage)
+        public TelemetryParametersBuilderBase<T> WithStage(int stage)
         {
             AddParameter("stage", stage);
             return this;
