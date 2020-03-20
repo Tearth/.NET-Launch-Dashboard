@@ -1,12 +1,12 @@
 ﻿using System;
 using DotNetLaunchDashboard.Models;
+using Newtonsoft.Json;
 using SocketIOClient;
 using SocketIOClient.Arguments;
-using EventHandler = SocketIOClient.EventHandler;
 
 namespace DotNetLaunchDashboard.Live
 {
-    public class LiveTelemetry
+    public class LiveTelemetry : IDisposable
     {
         public event EventHandler<EventArgs> OnConnected;
         public event EventHandler<ServerCloseReason> OnClosed;
@@ -22,16 +22,26 @@ namespace DotNetLaunchDashboard.Live
             _socket.OnConnected += SocketOnConnected;
             _socket.OnClosed += SocketOnClosed;
             _socket.OnError += SocketOnError;
+
+            _socket.On("raw", HandleRawTelemetry);
+            _socket.On("analysed", HandleAnalysedTelemetry);
         }
 
         public async void Start()
         {
             await _socket.ConnectAsync();
+            await _socket.EmitAsync("join", (object) new[] {"raw", "analysed"});
         }
 
         public async void Stop()
         {
             await _socket.CloseAsync();
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            _socket?.Dispose();
         }
 
         private void SocketOnConnected()
@@ -47,6 +57,18 @@ namespace DotNetLaunchDashboard.Live
         private void SocketOnError(ResponseArgs obj)
         {
             OnError?.Invoke(this, obj);
+        }
+
+        private void HandleRawTelemetry(ResponseArgs args)
+        {
+            var deserializedArgs = JsonConvert.DeserializeObject<TelemetryChunkModel>(args.Text);
+            OnRawTelemetry?.Invoke(this, deserializedArgs);
+        }
+
+        private void HandleAnalysedTelemetry(ResponseArgs args)
+        {
+            var deserializedArgs = JsonConvert.DeserializeObject<AnalysedTelemetryChunkModel>(args.Text);
+            OnAnalysedTelemetry?.Invoke(this, deserializedArgs);
         }
     }
 }
