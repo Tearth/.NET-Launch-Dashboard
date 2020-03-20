@@ -79,7 +79,8 @@ namespace ExampleApp
                 .WithStart(10)
                 .WithEnd(20)
                 .WithInterval(1)
-                .WithFlightNumber(80).ExecuteAsync();
+                .WithFlightNumber(80)
+                .ExecuteAsync();
 
             Console.Read();
         }
