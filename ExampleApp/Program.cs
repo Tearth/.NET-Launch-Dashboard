@@ -33,7 +33,11 @@ namespace ExampleApp
             var result2 = await launchDashboardCore.Analysed("spacex").WithFlightNumber(80).ExecuteAsync();
             var result3 = await launchDashboardCore.Events("spacex").WithFlightNumber(80).ExecuteAsync();
             var result4 = await launchDashboardCore.Launches("spacex").WithFlightNumber(80).ExecuteAsync();
-            var result5 = await launchDashboardCore.Raw("spacex").WithFlightNumber(80).ExecuteAsync();
+            var result5 = await launchDashboardCore.Raw("spacex")
+                .WithStart(10)
+                .WithEnd(20)
+                .WithInterval(1)
+                .WithFlightNumber(80).ExecuteAsync();
 
             Console.Read();
         }
