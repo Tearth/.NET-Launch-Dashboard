@@ -12,7 +12,7 @@ Wrapper for [.NET Launch Dashboard](https://github.com/shahar603/Launch-Dashboar
 https://github.com/shahar603/Launch-Dashboard-API/wiki
 
 # Minimal requirements
-Library is build on [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) which contains support for:
+Library is built on [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) which contains support for:
  * .NET Framework 4.6.1 or higher
  * .NET Core 2.0 or higher
  * Mono 5.4 or higher
