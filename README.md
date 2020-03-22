@@ -7,8 +7,6 @@
 [![GitHub license](https://img.shields.io/github/license/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/blob/master/LICENSE)
 [![GitHub license](https://img.shields.io/badge/Doxygen-gh--pages-blue)](https://tearth.github.io/.NET-Launch-Dashboard/)
 
-WIP
-
 Wrapper for [.NET Launch Dashboard](https://github.com/shahar603/Launch-Dashboard-API) project, providing information about the telemetry of launching rockets. To learn more, you can use [Doxygen](https://tearth.github.io/.NET-Launch-Dashboard/) or directly documentation of the API (method names are very familiar with endpoints):
 
 https://github.com/shahar603/Launch-Dashboard-API/wiki
