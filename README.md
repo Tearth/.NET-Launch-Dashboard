@@ -1,5 +1,5 @@
 # .NET Launch Dashboard
-[![NuGet](https://img.shields.io/github/release/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/releases)
+[![NuGet](https://img.shields.io/nuget/v/DotNETLaunchDashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/releases)
 [![Downloads](https://img.shields.io/nuget/dt/DotNetLaunchDashboard.svg)](https://www.nuget.org/packages/DotNetLaunchDashboard/)
 [![Build](https://travis-ci.org/Tearth/.NET-Launch-Dashboard.svg?branch=develop)](https://travis-ci.org/Tearth/.NET-Launch-Dashboard)
 [![GitHub issues](https://img.shields.io/github/issues/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/issues)
