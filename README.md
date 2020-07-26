@@ -1,15 +1,25 @@
 # .NET Launch Dashboard
-[![GitHub release](https://img.shields.io/github/release/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/releases)
+[![NuGet](https://img.shields.io/github/release/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/releases)
+[![Downloads](https://img.shields.io/nuget/dt/DotNetLaunchDashboard.svg)](https://www.nuget.org/packages/DotNetLaunchDashboard/)
 [![Build](https://travis-ci.org/Tearth/.NET-Launch-Dashboard.svg?branch=develop)](https://travis-ci.org/Tearth/.NET-Launch-Dashboard)
-[![NuGet downloads](https://img.shields.io/nuget/dt/DotNetLaunchDashboard.svg)](https://www.nuget.org/packages/DotNetLaunchDashboard/)
 [![GitHub issues](https://img.shields.io/github/issues/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/issues)
 [![GitHub stars](https://img.shields.io/github/stars/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/stargazers)
 [![GitHub license](https://img.shields.io/github/license/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/blob/master/LICENSE)
 [![Doxygen](https://img.shields.io/badge/Doxygen-gh--pages-blue)](https://tearth.github.io/.NET-Launch-Dashboard/)
 
-Wrapper for [Launch Dashboard API](https://github.com/shahar603/Launch-Dashboard-API) project, providing information about the telemetry of launching rockets. To learn more, you can use [Doxygen](https://tearth.github.io/.NET-Launch-Dashboard/) or directly documentation of the API (method names are very familiar with endpoints):
+Wrapper for **[Launch Dashboard API](https://github.com/shahar603/Launch-Dashboard-API)** project, providing information about the telemetry of launching rockets. To learn more, you can use **[Doxygen](https://tearth.github.io/.NET-Launch-Dashboard/)** or directly **[documentation of the API](https://github.com/shahar603/Launch-Dashboard-API/wiki)** (method names are very familiar with endpoints).
 
-https://github.com/shahar603/Launch-Dashboard-API/wiki
+# Installation
+ * download from NuGet: **https://www.nuget.org/packages/DotNetLaunchDashboard/**
+
+or
+
+ * search "DotNetLaunchDashboard" in Package Manager
+
+or
+
+ * run `Install-Package DotNetLaunchDashboard` in the Package Manager Console
+
 
 # Minimal requirements
 Library is built on [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/standard/net-standard) which contains support for:
@@ -24,17 +34,6 @@ Library is built on [.NET Standard 2.0](https://docs.microsoft.com/en-us/dotnet/
 **External dependencies:**
  * [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
  * [SocketIOClient](https://github.com/doghappy/socket.io-client-csharp)
-
-# Installation
- * download from NuGet: https://www.nuget.org/packages/DotNetLaunchDashboard/
-
-or
-
- * search "DotNetLaunchDashboard" in Package Manager
-
-or
-
- * run `Install-Package DotNetLaunchDashboard` in the Package Manager Console
 
 # Example usage
 ```csharp
