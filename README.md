@@ -2,9 +2,9 @@
 [![NuGet](https://img.shields.io/nuget/v/DotNETLaunchDashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/releases)
 [![Downloads](https://img.shields.io/nuget/dt/DotNetLaunchDashboard.svg)](https://www.nuget.org/packages/DotNetLaunchDashboard/)
 [![Build](https://travis-ci.org/Tearth/.NET-Launch-Dashboard.svg?branch=develop)](https://travis-ci.org/Tearth/.NET-Launch-Dashboard)
-[![GitHub issues](https://img.shields.io/github/issues/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/issues)
-[![GitHub stars](https://img.shields.io/github/stars/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/stargazers)
-[![GitHub license](https://img.shields.io/github/license/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/issues)
+[![Stars](https://img.shields.io/github/stars/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/stargazers)
+[![License](https://img.shields.io/github/license/Tearth/.NET-Launch-Dashboard.svg)](https://github.com/Tearth/.NET-Launch-Dashboard/blob/master/LICENSE)
 [![Doxygen](https://img.shields.io/badge/Doxygen-gh--pages-blue)](https://tearth.github.io/.NET-Launch-Dashboard/)
 
 Wrapper for **[Launch Dashboard API](https://github.com/shahar603/Launch-Dashboard-API)** project, providing information about the telemetry of launching rockets. To learn more, you can use **[Doxygen](https://tearth.github.io/.NET-Launch-Dashboard/)** or directly **[documentation of the API](https://github.com/shahar603/Launch-Dashboard-API/wiki)** (method names are very familiar with endpoints).
